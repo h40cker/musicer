@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Music Generator</title>
+</head>
+<body>
+    <h1>AI Music Generator</h1>
+    <form action="/generate_music" method="post">
+        <label for="prompt">Enter your music prompt:</label><br>
+        <input type="text" id="prompt" name="prompt" required><br><br>
+        <input type="submit" value="Generate Music">
+    </form>
+
+    {% if music_description %}
+        <h3>Generated Music Description:</h3>
+        <p>{{ music_description }}</p>
+    {% endif %}
+</body>
+</html>
